@@ -1,0 +1,55 @@
+/********** 
+  9. Pagination Styles 
+**********/
+.page-link {
+  position: relative;
+  display: block;
+  color: $pagination-color;
+  text-decoration: if($link-decoration == none, null, none);
+  background-color: $pagination-bg;
+  border: none;
+  @include transition($pagination-transition);
+  padding: $pagination-padding-y $pagination-padding-x;
+  border-radius: 6px;
+  font-weight: $font-weight-medium;
+  
+  &:hover {
+    z-index: 2;
+    color: $pagination-hover-color;
+    text-decoration: if($link-hover-decoration == underline, none, null);
+    background-color: $pagination-hover-bg;
+    border-color: $pagination-hover-border-color;
+  }
+
+  &:focus {
+    z-index: 3;
+    color: $pagination-focus-color;
+    background-color: $pagination-focus-bg;
+    outline: $pagination-focus-outline;
+    box-shadow: $pagination-focus-box-shadow;
+  }
+}
+
+.page-item {
+  margin-right: $spacer / 2 ;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:not(:first-child) .page-link {
+    margin-left: 0;
+  }
+
+  &.active .page-link {
+    z-index: 3;
+    color: $pagination-active-color;
+    @include gradient-bg($pagination-active-bg);
+    border-color: $pagination-active-border-color;
+  }
+
+  &.disabled .page-link {
+    color: $pagination-disabled-color;
+    pointer-events: none;
+    background-color: $pagination-disabled-bg;
+    border-color: $pagination-disabled-border-color;
+  }
+}

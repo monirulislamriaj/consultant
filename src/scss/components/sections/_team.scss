@@ -1,0 +1,43 @@
+/********** 
+  16. Team Section Styles 
+**********/
+.team {
+  &-member {
+    &-thumb {
+      width: $spacer * 5.525;
+      height: $spacer * 5.525;
+    }
+    &-thumb1 {
+      width: 100%;
+    }
+    &-socialLink {
+      a {
+        width: $spacer * 2.25;
+        height: $spacer * 2.25;
+        background: $gray-500;
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          path {
+            fill: $secondary;
+          }
+        }
+        &:hover {
+          background: $secondary;
+          svg {
+            path {
+              fill: $gray-500;
+            }
+          }
+        }
+      }
+      li:last-child {
+        a {
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
+}

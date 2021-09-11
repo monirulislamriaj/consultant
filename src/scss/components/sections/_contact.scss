@@ -1,0 +1,15 @@
+/********** 
+  18. Contact Page Styles 
+**********/
+.contact {
+  &-shape {
+    z-index: -1;
+    left: 20px;
+  }
+  &-form {
+    box-shadow: 0px 20px 60px rgba(50, 61, 88, 0.09);
+  }
+}
+#map {
+  height: 570px;
+}

@@ -1,0 +1,261 @@
+/********** 
+  11. Custom Styles 
+**********/
+
+
+/********** Circle on Banner Styles ***********/
+//Circle images
+.circle {
+  position: relative;
+  min-height: 800px;
+  max-height: 800px;
+  overflow: hidden;
+  z-index: -1;
+  &-shape {
+    &:nth-child(2n) {
+      img {
+        position: absolute !important;
+        box-shadow: 0px 20px 60px rgba(50, 61, 88, 0.09);
+        border-radius: 50%;
+        &:nth-child(4n + 1) {
+          bottom: 30%;
+          top: unset !important;
+          left: 0% !important;
+        }
+        &:nth-child(4n + 2) {
+          bottom: 30%;
+          top: unset !important;
+          right: 0% !important;
+        }
+      }
+    }
+    &:nth-child(3n) {
+      img {
+        position: absolute !important;
+        box-shadow: 0px 20px 60px rgba(50, 61, 88, 0.09);
+        border-radius: 50%;
+        &:nth-child(4n + 1) {
+          bottom: 20%;
+          top: unset !important;
+          left: 6% !important;
+        }
+        &:nth-child(4n + 2) {
+          bottom: 20%;
+          top: unset !important;
+          right: 6% !important;
+        }
+        &:nth-child(4n + 3) {
+          bottom: 5%;
+          top: unset !important;
+          left: 20% !important;
+        }
+        &:nth-child(4n + 4) {
+          bottom: 5%;
+          top: unset !important;
+          right: 20% !important;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xxl) {
+  .hero-home{
+    .circle {
+      min-height: 670px;
+    }
+  }
+  .circle{
+    &-shape{
+      &:nth-child(3n){
+        img{
+          &:nth-child(4n+1){
+            left: 4%;
+          }
+          &:nth-child(4n+2){
+            right: 4%;
+          }
+          &:nth-child(4n+3){
+            bottom: 4%;
+          }
+          &:nth-child(4n+4){
+            bottom: 4%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xl) { 
+  .circle{
+    min-height: 600px;
+    &-shape{
+      &:nth-child(2n){
+        img{
+          &:nth-child(4n+1){
+            bottom: 25%;
+          }
+          &:nth-child(4n+2){
+            bottom: 25%;
+          }
+        }
+      }
+      &:nth-child(3n){
+        img{
+          &:nth-child(4n+1){
+            left: 3% !important;
+            width:60px;
+          }
+          &:nth-child(4n+2){
+            right: 3% !important;
+            width:60px;
+          }
+          &:nth-child(4n+3){
+            bottom: 3%;
+            width:80px;
+          }
+          &:nth-child(4n+4){
+            bottom: 3%;
+            width:80px;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-down(lg) { 
+  .circle {
+    min-height: 600px;
+  }
+}
+@include media-breakpoint-down(md) { 
+  .cercle {
+    min-height: 500px;
+  }
+}
+
+
+/**********
+Section Header Styles
+***********/
+@each $color, $value in $theme-colors {
+  .section-bg-#{$color} {
+    @include section-header($value);
+  }
+}
+
+// .section-header{
+//   p{
+//     line-height: $font-size-base * 1.7;
+//   }
+//   span{
+//     font-size: .9rem;
+//   }
+// }
+/**********
+Card Header Styles
+***********/
+@each $color, $value in $theme-colors {
+  .card-bg-#{$color} {
+    @include section-header($value);
+  }
+}
+/**********
+CSS Grid Template  Styles
+***********/
+div[class*="grid-template"]{
+  @include media-breakpoint-down(lg){
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  @include media-breakpoint-down(md){
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .card{
+    &:nth-child(n){
+
+      transition: $transition-fade;
+    }
+    &:nth-child(2n){
+      transform: translateY(70px);
+      transition: $transition-fade;
+      @include media-breakpoint-down(md){
+        transform: translate(0);
+      }
+    }
+  }
+}
+/**********
+// scss-docs-start large Rounded Shape Background
+***********/
+.bg-shape{
+  &-wrapper{
+    height: 125%;
+    overflow: hidden;
+    top: 20%;
+    z-index: -1;
+  }
+  &-item{
+    position: absolute;
+    width: 1032px;
+    height: 1032px;
+    z-index: -1;
+    img{
+      position:absolute;
+      width:500px;
+    }
+    &.bg-secondary{
+      right:-15%;
+      img{
+        top:30%;
+        left:0
+      }
+    }
+    &.bg-primary{
+      left:-15%;
+      img{
+        top:20%;
+        right:0
+      }
+    }
+    
+  }
+}
+/* Key Frames */
+
+@keyframes leftToright {
+  from{
+    transform: translate(-10px);
+    transform-origin: center;
+    transform-style: preserve-3d;
+  }
+  to{
+    transform: translateX(10px);
+    transform-origin: center;
+    ransform-style: preserve-3d;
+  }
+  
+}
+/**********
+Badge Override
+***********/
+.badge-default{
+  background-color: $black
+}
+/**********
+Badge Soft  Styles
+***********/
+@each $color, $value in $theme-colors {
+  .badge-soft-#{$color} {
+    @include badge-soft($value);
+  }
+}
+/* Button Close Style */
+.btn-close{
+  margin-top: $spacer / 2;
+  margin-right: $spacer;
+  &:focus{
+    outline: 0;
+    box-shadow: none;
+  }
+}

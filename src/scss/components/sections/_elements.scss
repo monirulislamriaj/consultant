@@ -1,0 +1,61 @@
+/********** 
+  21. Elements Page Styles 
+**********/
+//Element Styles 
+.elements{
+  .card{
+    margin-bottom: $spacer * 2;
+  }
+  h1{
+    font-size: 3.5rem;
+  }
+  &-card{
+    transition: $transition-base;
+    &:hover{
+      box-shadow: 0px 40px 60px rgba(50, 61, 88, .2);
+    }
+  }
+}
+
+//Accordion Styles
+.section-bg-primary .accordion-button:not(.collapsed) {
+  border-bottom: 1px solid $white;
+  box-shadow: none;
+}
+
+/********** 
+  Form Styles 
+**********/
+.form-check{
+  &-input{
+    width: 1.5em;
+    height: 1.5em;
+  }
+  label{
+    padding-top: $spacer / 4;
+    padding-left: $spacer / 2;
+  }
+}
+.form-switch {
+  .form-check-input{
+    width:2.5rem
+  }
+}
+/* Nav tab */
+.nav-tabs {
+  border-bottom: 3px solid $primary;
+}
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  color: $white;
+  background-color: $primary;
+  border-color:  $primary;
+}
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+  border-color:  transparent;
+  isolation: isolate;
+}
+
+/* Pre ELements*/
+pre[class*="language-"] {
+  margin: 0;
+}

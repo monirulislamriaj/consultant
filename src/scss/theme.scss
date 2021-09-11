@@ -1,0 +1,68 @@
+/*!------------------------------------------------------------------
+[MAIN STYLESHEET]
+PROJECT:	Consultant
+-------------------------------------------------------------------*/
+/* ====== index =====
+1. Bootstrap Source Styles 
+2. Custom Utilities
+3.  Reboot
+4.  Root
+5.  Navbar
+6.  Buttons
+7.  Card
+8.  Dropdown
+9.  Pagination
+10.  Hero
+11.  Custom
+12. Service
+13. About
+14. Pricing
+15. Testimonial
+16. Team
+17. Blog
+18. Contact
+19. Get start
+20. Taxonomy
+21. Terms
+22. Elements
+
+===================== */
+
+@import "bootstrap/scss/functions";
+@import "variables";
+@import "components/utilities";
+/********** 
+  1. Bootstrap Source Styles 
+**********/
+@import "bootstrap/scss/bootstrap";
+//Customizes bootstrap components
+/********** 
+   End of Bootstrap Source Styles 
+**********/
+//Customizes bootstrap mixins
+
+@import "components/mixins/buttons";
+@import "components/mixins/custom-mixins";
+//Customizes bootstrap contents
+@import "components/reboot";
+@import "components/root";
+@import "components/navbar";
+@import "components/buttons";
+@import "components/card";
+@import "components/dropdown";
+@import "components/pagination";
+//Theme Sections And Pages Sass
+@import "components/sections/hero";
+@import "components/sections/custom";
+@import "components/sections/service";
+@import "components/sections/about";
+@import "components/sections/pricing";
+@import "components/sections/testimonial";
+@import "components/sections/team";
+@import "components/sections/blog";
+@import "components/sections/contact";
+@import "components/sections/getstart";
+@import "components/sections/taxonomy";
+@import "components/sections/terms-privacy";
+@import "components/sections/elements";
+

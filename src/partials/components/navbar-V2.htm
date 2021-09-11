@@ -1,0 +1,197 @@
+<!--
+  #############
+ Navbar Area
+  #############
+-->
+
+<header>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id="navigationBar">
+    <div class="container-fluid position-relative">
+      <!--Navbar Brand-->
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.svg" alt="" class="w-md-100 w-75">
+      </a>
+      <!--Navbar Toggler-->
+      <button class="navbar-toggler p-3" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-default">
+          <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+            <path fill="white"
+              d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z">
+            </path>
+          </svg>
+        </span>
+        <span class="navbar-toggler-toggled">
+          <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+            <path fill="white" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"></path>
+        </svg>
+        </span>
+      </button>
+      <!--Navbar Menus Collapse-->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ms-auto ">
+
+          <li class="nav-item dropdown">
+            <a href="index.html" class="nav-link @@if(nav == 'home'){active}"  >Home</a>
+            <!-- <ul class="dropdown-menu py-0 " aria-labelledby="homeDropdown">
+              <li><a class="dropdown-item" href="index.html">Home Version 1</a></li>
+              <li><a class="dropdown-item" href="home2.html">Home Version 2</a></li>
+            </ul> -->
+          </li>
+
+          <li class="nav-item ">
+            <a href="about.html" class="nav-link @@if(nav == 'about'){active}" >About</a>
+            
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link @@if(nav == 'service'){active}" href="services.html">
+              Services
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link @@if(nav == 'blog'){active}" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link @@if(nav == 'contact'){active}" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item dropdown has-megamenu">
+            <a class="nav-link  dropdown-toggle @@if(nav == 'elements'){active}" href="elements.html"  id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Elements</a>
+            <ul class="dropdown-menu p-0 megamenu" aria-labelledby="aboutDropdown">
+              <li>
+                <ul class="row list-unstyled dropdown-megamenu">
+                  <li class="col-lg-2 col-sm-6">
+                    <h4>Elements</h4>
+                    <ul class="list-unstyled">
+                      <li> <a href="accordion.html" class="dropdown-item" >Accordions</a></li>
+                      <li> <a href="alerts.html" class="dropdown-item" >Alerts</a></li>
+                      <li> <a href="badge.html" class="dropdown-item" >Badges</a></li>
+                      <li> <a href="button.html" class="dropdown-item" >Buttons</a></li>
+                      <li> <a href="card.html" class="dropdown-item" >Card</a></li>
+                      <li> <a href="form.html" class="dropdown-item" >Forms</a></li>
+                    </ul>
+                  </li>
+  
+                  <li class="col-lg-2  col-sm-6">
+                    <h4>Elements</h4>
+                    <ul class="list-unstyled">
+                      <li> <a href="modal.html" class="dropdown-item" >Modals</a></li>
+                      <li> <a href="navbar-style.html" class="dropdown-item" >Navbars</a></li>
+                      <li> <a href="pagination.html" class="dropdown-item" >Tabs</a></li>
+                      <li> <a href="tables.html" class="dropdown-item" >Tables</a></li>
+                      <li> <a href="teams.html" class="dropdown-item" >Teams</a></li>
+                      <li> <a href="testimonials.html" class="dropdown-item" >Testimonials</a></li>
+                      <li> <a href="video.html" class="dropdown-item" >Video</a></li>
+                    </ul>
+                  </li>
+  
+                  <li class="col-lg-3 ms-auto col-sm-6">
+                    <article class="card blog-post-items p-3 bg-light shadow-none rounded-4 w-100  ">
+                      <div class="blog-post-item-thumb w-100">
+                        <img src="images/blog/featured-thumb4.png" alt="featured-thumb1" class="rounded-4 w-100" >
+                      </div>
+        
+                      <div class="blog-post-content w-100 mt-3">
+                        <div class="blog-post-author d-flex align-items-center mb-3">
+                          <img class="blog-post-author-thumb rounded-circle border border-3 border-teal" src="images/blog/author-thumb2.png" alt="author">
+                          <h6 class="fw-medium ms-2">Lara Croft</h6>
+                        </div>
+        
+                        <div class="blog-post-meta   mb-3">
+                          <ul class="list-inline list-unstyled">
+                            <li class="list-inline-item">
+                              <a href="taxonomy.html">
+                                <span class="badge badge-soft-secondary-light">Technology</span>
+                              </a>
+                            </li>
+                            <li class="list-inline-item">
+                              <span class="me-2">3 Min</span>. 
+                              <span class="ms-2">13th March</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="blog-post-body">
+                          <div class="blog-post-body-title">
+                            <a href="blog-single.html">
+                              <h2 class="mb-2">
+                                The Story Of Consultancy Has Just Gone Viral!
+                              </h2>
+                            </a>
+                            <p>
+                              Diam urna, sit aenean mauris sit tincidunt vitae mauris ipsum. Habitasse enim, cursus lacus, mi. 
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+  
+                  <li class="col-lg-3  col-sm-6">
+                    <article class="card blog-post-items p-3 bg-light shadow-none rounded-4 w-100  ">
+                      <div class="blog-post-item-thumb w-100">
+                        <img src="images/blog/featured-thumb6.png" alt="featured-thumb1" class="rounded-4 w-100" >
+                      </div>
+        
+                      <div class="blog-post-content w-100 mt-3">
+                        <div class="blog-post-author d-flex align-items-center mb-3">
+                          <img class="blog-post-author-thumb rounded-circle border border-3 border-teal" src="images/blog/author-thumb2.png" alt="author">
+                          <h6 class="fw-medium ms-2">Lara Croft</h6>
+                        </div>
+        
+                        <div class="blog-post-meta   mb-3">
+                          <ul class="list-inline list-unstyled">
+                            <li class="list-inline-item">
+                              <a href="taxonomy.html">
+                                <span class="badge badge-soft-secondary-light">Technology</span>
+                              </a>
+                            </li>
+                            <li class="list-inline-item">
+                              <span class="me-2">3 Min</span>. 
+                              <span class="ms-2">13th March</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="blog-post-body">
+                          <div class="blog-post-body-title">
+                            <a href="blog-single.html">
+                              <h2 class="mb-2">
+                                The Story Of Consultancy Has Just Gone Viral!
+                              </h2>
+                            </a>
+                            <p>
+                              Diam urna, sit aenean mauris sit tincidunt vitae mauris ipsum. Habitasse enim, cursus lacus, mi. 
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                </ul>
+              </li>
+              
+              
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="documentation.html">
+              Documentation
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class=" btn btn-sm btn-light-green ms-lg-3 ms-0" href="getstart.html" tabindex="-1"
+              aria-disabled="true">Get Started</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<!--
+  #############
+  End of  Navbar Area
+  #############
+-->

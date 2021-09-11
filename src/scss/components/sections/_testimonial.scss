@@ -1,0 +1,136 @@
+/********** 
+  15. Testimonial Section Styles 
+**********/
+.testimonial {
+  &-slider,
+  .testimonial-slider {
+    .card {
+      background: $white;
+      border-radius: 25px;
+      margin: 50px 20px 120px 20px !important;
+      transition: all 0.5s ease-in-out;
+      //transition-delay: 500ms;
+      outline: 0;
+      box-shadow: 0px 20px 20px rgba(50, 61, 88, 0.09) !important;
+      span {
+        font-size: $font-size-sm;
+      }
+      p {
+        font-size: $font-size-base * 0.9;
+        font-style: italic;
+      }
+      img {
+        width: 70px;
+        height: 70px;
+      }
+      &.slick-current {
+        transform: scale(1.1, 1.15);
+        background: $secondary;
+        box-shadow: 0px 20px 30px rgba(50, 61, 88, 0.2) !important;
+        h4 {
+          color: $white;
+        }
+        span {
+          font-size: $font-size-base * 0.8;
+          color: $white;
+        }
+        p {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+.testimonial {
+  &-sliderTwo {
+    width: 80%;
+    margin: 0 auto;
+    .card {
+      background: $white;
+      margin: 50px 20px 50px 20px;
+      transition: all 0.5s ease-in-out;
+      //transition-delay: 500ms;
+      outline: 0;
+      border-radius: 150px;
+      // box-shadow: 0px 20px 20px rgba(50, 61, 88, 0.09) !important;
+      box-shadow: 0px 20px 60px rgba(50, 61, 88, 0.09) !important;
+      box-shadow: none !important;
+      span {
+        font-size: $font-size-sm;
+      }
+      p {
+        font-size: $font-size-base * 0.9;
+        font-style: italic;
+      }
+      img {
+        width: 150px;
+        height: 150px;
+      }
+      &.slick-current {
+        // transform: scale(1.1, 1.15);
+        background: $white;
+        // box-shadow: 0px 20px 30px rgba(50, 61, 88, 0.2) !important;
+        box-shadow: 0px 20px 60px rgba(50, 61, 88, 0.09) !important;
+        h4 {
+          // color: $white;
+        }
+        span {
+          font-size: $font-size-base * 0.8;
+          // color: $white;
+        }
+        p {
+          // color: $white;
+        }
+      }
+    }
+  }
+}
+/******
+Slick Slider Dots Styles
+*******/
+.slick-dots li button:before {
+  font-size: $font-size-base * .75;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: $secondary;
+}
+.slick-dots {
+  bottom: 40px;
+}
+
+.slick-prev,
+.slick-next {
+  width: 60px;
+  height: 60px;
+  color: $white;
+  border-radius: 15px;
+  box-shadow: 0px 20px 60px rgba(50, 61, 88, 0.09) !important;
+  transition: $transition-base;
+  &:hover {
+    background: $secondary;
+    color: $white !important;
+    &:before,
+    &:before {
+      color: $white;
+    }
+  }
+}
+.slick-next {
+  right: -80px;
+}
+.slick-prev {
+  left: -80px;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-family: "fontawesome";
+  font-size: 14px;
+  color: $black;
+}
+.slick-prev:before {
+  content: "\f060";
+}
+.slick-next:before {
+  content: "\f061";
+}

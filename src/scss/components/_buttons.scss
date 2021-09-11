@@ -1,0 +1,131 @@
+// Override Bootstrap Button style
+// Button Base styles
+//
+/********** 
+  6. Button Styles 
+**********/
+.btn {
+  font-weight: $font-weight-medium;
+  letter-spacing: $letter-spacing-base;
+  border: none;
+  &:hover {
+    color: $white;
+  }
+
+  .btn-check:focus + &,
+  &:focus {
+    color: $white !important;
+    outline: 0;
+    @include box-shadow(none);
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active {
+    color: $white !important;
+    @include box-shadow(none);
+
+    &:focus {
+      color: $white !important;
+      @include box-shadow(none);
+    }
+  }
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    pointer-events: none;
+    opacity: $btn-disabled-opacity;
+    @include box-shadow(none);
+  }
+  
+}
+
+//
+// Alternate buttons
+//
+
+// scss-docs-start btn-variant-loops
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+// scss-docs-end btn-variant-loops
+
+//
+//Over Ride Default Button Styles
+//
+.btn{
+  &-primary {
+    color: $white;
+  }
+  &-white {
+    color: $primary;
+    &:hover {
+      background-color: $gray-100;
+      color: $primary;
+    }
+  }
+  &-secondary {
+    color: $secondary;
+    background: rgba($color: #9360ffb2, $alpha: 0.15);
+    &:hover {
+      color: $secondary;
+      background: $indigo-100;
+    }
+    .btn-check:focus + &,
+    &:focus {
+      color: $white;
+      background: $secondary;
+    }
+  }
+  &-light-green {
+    color: $primary;
+    &:hover {
+      color: $white;
+      background: $primary;
+    }
+    .btn-check:focus + &,
+    &:focus {
+      color: $white;
+      background: $primary;
+    }
+  }
+}
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+  @include button-size(
+    $btn-padding-y-lg,
+    $btn-padding-x-lg,
+    $btn-font-size-lg,
+    $btn-border-radius-lg
+  );
+}
+
+.btn-sm {
+  @include button-size(
+    $btn-padding-y-sm,
+    $btn-padding-x-sm,
+    $btn-font-size-sm,
+    $btn-border-radius-sm
+  );
+}
+.btn-link{
+  text-decoration: underline;
+  &:hover{
+    color: $primary;
+  }
+}
+  
